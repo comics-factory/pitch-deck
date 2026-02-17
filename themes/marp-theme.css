@@ -1,0 +1,80 @@
+/* @theme custom */
+
+@import 'default';
+
+section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 28px;
+  padding: 40px;
+}
+
+h1, h2 {
+  color: #1a5f7a;
+}
+
+h1 {
+  font-size: 60px;
+  border-bottom: 4px solid #1a5f7a;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 45px;
+  margin-top: 0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #1a5f7a;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+footer {
+  font-size: 15px;
+  color: #777;
+}
+
+header {
+  font-size: 15px;
+  color: #1a5f7a;
+  text-align: right;
+}
+
+section.title {
+  background-color: #1a5f7a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.title h1 {
+  color: #ffffff;
+  border-bottom: none;
+  font-size: 80px;
+}
+
+section.title h2 {
+  color: #d1e8e2;
+  font-size: 40px;
+}
+
+section.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.split .column {
+  width: 48%;
+}
+
+.highlight {
+  color: #1a5f7a;
+  font-weight: bold;
+}
