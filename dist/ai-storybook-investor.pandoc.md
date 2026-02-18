@@ -1,8 +1,13 @@
+---
+paginate: true
+header: AI StoryBook Pitch Deck
+footer: © 2026 AI StoryBook
+---
 
 
-<!-- _class: title -->
 
 # AI StoryBook
+**[Logo]**
 ## Illustrate your imaginations to others
 
 ---
@@ -29,6 +34,50 @@
 - Fixed, reusable style packs and story-structure control.
 
 - Built-in paneling, speech bubbles, and right-to-left layout.
+
+
+
+---
+
+### Demo 1: Shadow Slave (Manga Style)
+
+::: columns
+:::: column
+**Input**
+
+*Text:* "A frail-looking young man with pale skin and dark circles..."
+
+*Image:*
+![](assets/comics/manga.jpg){ width=40% }
+::::
+
+:::: column
+**Output**
+
+![](assets/comics/manga.pdf){ width=90% }
+::::
+:::
+
+---
+
+### Demo 2: The Boy and the Magic Van (Children's Book)
+
+::: columns
+:::: column
+**Input**
+
+*Text:* "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
+
+*Image:*
+![](assets/comics/children_book.JPG){ width=40% }
+::::
+
+:::: column
+**Output**
+
+![](assets/comics/children_book_page_1.png){ width=90% }
+::::
+:::
 
 
 ---
@@ -77,13 +126,13 @@ Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML
 
 ## The Ask
 
-<div class="highlight">
+> **
 $15k in API or GPU credits, publisher intros, legal regulations advice.
-</div>
+**
 
 ---
 
-<!-- _class: title -->
+
 
 # Thank You!
 ## Let's build the future of storytelling together.

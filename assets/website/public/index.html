@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+    <title>AI Storybook - Coming Soon</title>
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #111;
+        color: #eaff6b;
+        font-family: 'Inter', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: hidden;
+      }
+      .container {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo {
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      .logo svg {
+        width: 100px;
+        height: 100px;
+        display: block;
+      }
+      .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #eaff6b;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        color: #ccc;
+        text-align: center;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+      .email-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .input-field {
+        width: 100%;
+        background: #222;
+        border: none;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        box-sizing: border-box;
+      }
+      .input-field:focus {
+        background: #2a2a2a;
+      }
+      .subscribe-btn {
+        width: 100%;
+        background: #eaff6b;
+        color: #222;
+        border: none;
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .subscribe-btn:hover {
+        background: #d6e85e;
+      }
+      .subscribe-btn:disabled {
+        background: #666;
+        cursor: not-allowed;
+      }
+      .message {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        display: none;
+      }
+      .message.success {
+        background: rgba(44, 182, 125, 0.2);
+        color: #2cb67d;
+        border: 1px solid #2cb67d;
+      }
+      .message.error {
+        background: rgba(241, 91, 181, 0.2);
+        color: #f15bb5;
+        border: 1px solid #f15bb5;
+      }
+      .features {
+        width: 100%;
+        margin-top: 40px;
+        color: #999;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .features h3 {
+        color: #eaff6b;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .features ul {
+        list-style: none;
+        padding: 0;
+        line-height: 2;
+      }
+      .features li:before {
+        content: "✓ ";
+        color: #2cb67d;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .demo-section {
+        width: 100%;
+        margin-top: 50px;
+        padding-top: 40px;
+        border-top: 1px solid #333;
+      }
+      .demo-title {
+        color: #eaff6b;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .demo-subtitle {
+        color: #999;
+        font-size: 0.95rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .form-group {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      .form-label {
+        display: block;
+        color: #eaff6b;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .demo-input {
+        width: 100%;
+        background: #222;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 14px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .demo-input:focus {
+        background: #2a2a2a;
+        border-color: #eaff6b;
+      }
+      .demo-input:disabled,
+      .demo-input:read-only {
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
+      .demo-textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.5;
+      }
+      .photo-upload {
+        width: 100%;
+        background: #222;
+        border: 2px dashed #444;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        cursor: not-allowed;
+        box-sizing: border-box;
+      }
+      .photo-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .sample-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #eaff6b;
+      }
+      .placeholder-icon {
+        width: 60px;
+        height: 60px;
+        opacity: 0.6;
+      }
+      .photo-text {
+        color: #999;
+        font-size: 0.9rem;
+      }
+      .generate-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #7f5af0 0%, #f15bb5 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 18px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .generate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(127, 90, 240, 0.4);
+      }
+      .generate-btn span {
+        display: inline-block;
+      }
+      /* QR code badge */
+      .qr-badge {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        border: 2px solid rgba(234,255,107,0.12);
+        background: #111;
+        z-index: 1000;
+      }
+      @media (max-width: 480px) {
+        .title {
+          font-size: 2rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .demo-title {
+          font-size: 1.5rem;
+        }
+        .container {
+          padding: 30px 15px;
+        }
+        .qr-badge {
+          width: 64px;
+          height: 64px;
+          right: 10px;
+          bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <!-- SVG logo matching screenshot colors -->
+        <svg viewBox="0 0 100 100">
+          <path d="M50,10 C70,10 90,30 90,50" stroke="#7f5af0" stroke-width="7" fill="none"/>
+          <path d="M50,10 C30,10 10,30 10,50" stroke="#2cb67d" stroke-width="7" fill="none"/>
+          <path d="M50,90 C70,90 90,70 90,50" stroke="#f15bb5" stroke-width="7" fill="none"/>
+          <path d="M50,90 C30,90 10,70 10,50" stroke="#00cfff" stroke-width="7" fill="none"/>
+          <circle cx="50" cy="50" r="18" stroke="#eaff6b" stroke-width="7" fill="none"/>
+        </svg>
+      </div>
+      <div class="title">AI Storybook</div>
+      <div class="subtitle">
+        Transform your ideas into beautifully illustrated stories with AI.<br/>
+        Join the waiting list to be the first to know when we launch!
+      </div>
+      <form class="email-form" id="subscribeForm">
+        <input 
+          type="email" 
+          id="email" 
+          class="input-field" 
+          placeholder="Enter your email" 
+          required 
+          autocomplete="email" 
+        />
+        <button type="submit" class="subscribe-btn" id="subscribeBtn">
+          Join the Waiting List
+        </button>
+      </form>
+      <div id="message" class="message"></div>
+      
+      <div class="demo-section">
+        <h3 class="demo-title">Try the Demo</h3>
+        <p class="demo-subtitle">See how easy it is to create your personalized storybook</p>
+        
+        <div class="form-group">
+          <label class="form-label">Photo</label>
+          <div class="photo-upload">
+            <div class="photo-preview">
+              <img src="/public/hesdi.jpg" alt="Sample character photo" class="sample-photo">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="storyTitle">Title</label>
+          <input 
+            type="text" 
+            id="storyTitle" 
+            class="demo-input" 
+            value="Shadow Slave"
+            readonly
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="storyGenre">Genre</label>
+          <select id="storyGenre" class="demo-input" disabled>
+            <option value="manga" selected>Manga</option>
+            <option value="adventure">Adventure</option>
+            <option value="scifi">Science Fiction</option>
+            <option value="mystery">Mystery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="storyPlot">Plot</label>
+          <textarea 
+            id="storyPlot" 
+            class="demo-input demo-textarea" 
+            rows="4"
+            readonly
+          >Growing up in poverty, Sunny never expected anything good from life. However, even he did not anticipate being chosen by the Nightmare Spell and becoming one of the Awakened - an elite group of people gifted with supernatural powers. Transported into a ruined magical world, he found himself facing against terrible monsters - and other Awakened - in a deadly battle of survival. What's worse, the divine power he received happened to possess a small, but potentially fatal side effect...</textarea>
+        </div>
+
+        <button class="generate-btn" id="generateBtn">
+          <span>🎨 Generate Storybook</span>
+        </button>
+      </div>
+
+      <div class="features">
+        <h3>What You'll Get</h3>
+        <ul>
+          <li>AI-powered story generation</li>
+          <li>Beautiful custom illustrations</li>
+          <li>Professional PDF storybooks</li>
+          <li>Personalized for every reader</li>
+        </ul>
+      </div>
+    </div>
+    
+    <script>
+      const form = document.getElementById('subscribeForm');
+      const emailInput = document.getElementById('email');
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      const messageDiv = document.getElementById('message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const email = emailInput.value.trim();
+        
+        if (!email) {
+          showMessage('Please enter your email address', 'error');
+          return;
+        }
+
+        // Disable button and show loading state
+        subscribeBtn.disabled = true;
+        subscribeBtn.textContent = 'Subscribing...';
+        messageDiv.style.display = 'none';
+
+        try {
+          const response = await fetch('/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email })
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            showMessage('🎉 ' + data.message, 'success');
+            emailInput.value = '';
+            subscribeBtn.textContent = 'Subscribed!';
+            setTimeout(() => {
+              subscribeBtn.textContent = 'Join the Waiting List';
+            }, 3000);
+          } else {
+            showMessage(data.error || 'An error occurred. Please try again.', 'error');
+            subscribeBtn.textContent = 'Join the Waiting List';
+          }
+        } catch (error) {
+          showMessage('Network error. Please check your connection and try again.', 'error');
+          subscribeBtn.textContent = 'Join the Waiting List';
+        } finally {
+          subscribeBtn.disabled = false;
+        }
+      });
+
+      function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = 'message ' + type;
+        messageDiv.style.display = 'block';
+      }
+
+      // Handle generate storybook button
+      const generateBtn = document.getElementById('generateBtn');
+      generateBtn.addEventListener('click', () => {
+        // Get the selected genre (style)
+        const genre = document.getElementById('storyGenre').value;
+                
+        const style = genre || 'manga';
+        const photo = 'hesdi'; // Using the photo filename without extension
+        
+        // Navigate to result page with parameters
+        window.location.href = `/result?style=${style}&photo=${photo}`;
+      });
+    </script>
+    <!-- QR code badge (links to demo or info) -->
+    <img src="/public/qr_code.png" alt="QR Code" class="qr-badge" />
+  </body>
+</html>

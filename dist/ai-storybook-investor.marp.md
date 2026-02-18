@@ -8,7 +8,10 @@ footer: © 2026 AI StoryBook
 
 <!-- _class: title -->
 
+![logo w:150](../assets/logo.svg)
+
 # AI StoryBook
+
 ## Illustrate your imaginations to others
 
 ---
@@ -39,11 +42,81 @@ footer: © 2026 AI StoryBook
 
 ---
 
+
+<!-- _class: demo -->
+
+### Demo 1: Shadow Slave (Manga Style)
+
+<div class="columns">
+<div class="column">
+
+**Input**
+
+<div class="demo-input">
+
+*Text:* "A frail-looking young man with pale skin and dark circles..."
+
+*Reference Image:*
+
+![w:300](assets/comics/manga.jpg)
+
+</div>
+</div>
+
+<div class="column">
+
+**Generated Output**
+
+![w:550](assets/comics/manga.pdf)
+
+</div>
+</div>
+
+---
+
+
+<!-- _class: demo -->
+
+### Demo 2: The Boy and the Magic Van (Children's Book)
+
+<div class="columns">
+<div class="column">
+
+**Input**
+
+<div class="demo-input">
+
+*Text:* "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
+
+*Reference Image:*
+
+![w:300](assets/comics/children_book.JPG)
+
+</div>
+</div>
+
+<div class="column">
+
+**Generated Output**
+
+![w:550](assets/comics/children_book_page_1.png)
+
+</div>
+</div>
+
+---
+
+
+
 ## Market Opportunity
 
+<div class="emphasis">
+
 - **TAM:** $16–20B (Global B2C creators/fans + B2B small publishers)
-- **SAM:** $1.5–2.5B
+- **SAM:** $1.5–2.5B  
 - **SOM:** $40–60M (3-yr reachable)
+
+</div>
 
 ---
 
@@ -59,24 +132,40 @@ footer: © 2026 AI StoryBook
 
 ## Roadmap
 
-### Short Term
+<div class="columns">
+<div class="column">
+
+### 🎯 Short Term
 Public beta, 10+ styles, 20-page chapters, EN↔JP translation.
 
-### Long Term
+</div>
+
+<div class="column">
+
+### 🚀 Long Term
 Style marketplace, exports, publisher API pilots, early video/animatics.
+
+</div>
+</div>
 
 ---
 
 ## Meet the Team
 
 
-### Abdulazizbek Gainazarov - Data Scientist
+<div class="emphasis">
+
+**Abdulazizbek Gainazarov** - *Data Scientist*
 Work at WizzAir, Bachelor’s Degree in CS.
 
+</div>
 
-### Bálint Décsi - Data Engineer
+<div class="emphasis">
+
+**Bálint Décsi** - *Data Engineer*
 Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML.
 
+</div>
 
 
 ---
@@ -84,7 +173,9 @@ Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML
 ## The Ask
 
 <div class="highlight">
+
 $15k in API or GPU credits, publisher intros, legal regulations advice.
+
 </div>
 
 ---
@@ -92,4 +183,7 @@ $15k in API or GPU credits, publisher intros, legal regulations advice.
 <!-- _class: title -->
 
 # Thank You!
+
 ## Let's build the future of storytelling together.
+
+![logo w:120](../assets/logo.svg)

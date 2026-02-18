@@ -27,3 +27,12 @@ team:
     role: Data Engineer
     background: Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML.
 ask: "$15k in API or GPU credits, publisher intros, legal regulations advice."
+demo:
+  - title: "Demo 1: Shadow Slave (Manga Style)"
+    input_text: "A frail-looking young man with pale skin and dark circles..."
+    input_image: "assets/comics/manga.jpg"
+    output_image: "assets/comics/manga.pdf"
+  - title: "Demo 2: The Boy and the Magic Van (Children's Book)"
+    input_text: "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
+    input_image: "assets/comics/children_book.JPG"
+    output_image: "assets/comics/children_book_page_1.png"

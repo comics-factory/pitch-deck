@@ -1,0 +1,48 @@
+% Comics Factory Theme for Beamer
+\mode<presentation>
+
+% Colors
+\definecolor{cfBlack}{HTML}{111111}
+\definecolor{cfLime}{HTML}{EAFF6B}
+\definecolor{cfPurple}{HTML}{7F5AF0}
+\definecolor{cfPink}{HTML}{F15BB5}
+\definecolor{cfCyan}{HTML}{00CFFF}
+\definecolor{cfGrey}{HTML}{CCCCCC}
+\definecolor{cfDarkGrey}{HTML}{222222}
+
+% Backgrounds
+\setbeamercolor{background canvas}{bg=cfBlack}
+\setbeamercolor{normal text}{fg=cfGrey}
+
+% Titles and Structure
+\setbeamercolor{title}{fg=cfLime}
+\setbeamercolor{frametitle}{fg=cfLime}
+\setbeamercolor{structure}{fg=cfPurple}
+\setbeamercolor{local structure}{fg=cfPink}
+
+% Blocks
+\setbeamercolor{block title}{bg=cfDarkGrey,fg=cfLime}
+\setbeamercolor{block body}{bg=cfDarkGrey,fg=cfGrey}
+
+% Itemize/Enumerate
+\setbeamercolor{item}{fg=cfCyan}
+\setbeamercolor{subitem}{fg=cfPink}
+
+% Fonts
+\setbeamerfont{title}{size=\Huge, series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE, series=\bfseries}
+\setbeamerfont{caption}{size=\scriptsize}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Custom footer
+\setbeamertemplate{footline}{
+  \hfill\usebeamercolor[fg]{structure}\insertframenumber\hspace*{1em}\vspace*{1em}
+}
+
+% Fix for white background in some themes
+\setbeamercolor{background}{bg=cfBlack}
+
+\mode
+<all>

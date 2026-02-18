@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
+    <title>Comics Factory - Coming Soon</title>
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #111;
+        color: #eaff6b;
+        font-family: 'Inter', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: hidden;
+      }
+      .container {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo {
+        margin-bottom: 10px;
+        margin-top: 0px;
+      }
+      .logo svg {
+        width: 80px;
+        height: 80px;
+        display: block;
+      }
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #eaff6b;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .subtitle {
+        font-size: 1rem;
+        color: #ccc;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+      .email-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .input-field {
+        width: 100%;
+        background: #222;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 0.95rem;
+        outline: none;
+        box-sizing: border-box;
+      }
+      .input-field:focus {
+        background: #2a2a2a;
+      }
+      .subscribe-btn {
+        width: 100%;
+        background: #eaff6b;
+        color: #222;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .subscribe-btn:hover {
+        background: #d6e85e;
+      }
+      .subscribe-btn:disabled {
+        background: #666;
+        cursor: not-allowed;
+      }
+      .message {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        display: none;
+      }
+      .message.success {
+        background: rgba(44, 182, 125, 0.2);
+        color: #2cb67d;
+        border: 1px solid #2cb67d;
+      }
+      .message.error {
+        background: rgba(241, 91, 181, 0.2);
+        color: #f15bb5;
+        border: 1px solid #f15bb5;
+      }
+      .features {
+        width: 100%;
+        margin-top: 40px;
+        color: #999;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .features h3 {
+        color: #eaff6b;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .features ul {
+        list-style: none;
+        padding: 0;
+        line-height: 2;
+      }
+      .features li:before {
+        content: "✓ ";
+        color: #2cb67d;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .demo-section {
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+      }
+      .demo-title {
+        color: #eaff6b;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .demo-subtitle {
+        color: #999;
+        font-size: 0.95rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .form-group {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      .form-label {
+        display: block;
+        color: #eaff6b;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .input-explanation {
+        color: #999;
+        font-size: 0.85rem;
+        margin-top: -4px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+      .demo-input {
+        width: 100%;
+        background: #222;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 14px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .demo-input:focus {
+        background: #2a2a2a;
+        border-color: #eaff6b;
+      }
+      .demo-input:disabled,
+      .demo-input:read-only {
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
+      .genre-selector {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .genre-btn {
+        flex: 1;
+        background: #222;
+        border: 1px solid #333;
+        color: #999;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: not-allowed;
+        transition: all 0.2s;
+        font-family: 'Inter', Arial, sans-serif;
+        font-size: 0.9rem;
+      }
+      .genre-btn.active {
+        background: rgba(234, 255, 107, 0.1);
+        color: #eaff6b;
+        border-color: #eaff6b;
+        font-weight: 600;
+      }
+      .demo-textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.5;
+      }
+      .photo-upload {
+        width: 100%;
+        background: #222;
+        border: 2px dashed #444;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        cursor: not-allowed;
+        box-sizing: border-box;
+      }
+      .photo-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .sample-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #eaff6b;
+      }
+      .placeholder-icon {
+        width: 60px;
+        height: 60px;
+        opacity: 0.6;
+      }
+      .photo-text {
+        color: #999;
+        font-size: 0.9rem;
+      }
+      .generate-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #7f5af0 0%, #f15bb5 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 18px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .generate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(127, 90, 240, 0.4);
+      }
+      .generate-btn span {
+        display: inline-block;
+      }
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+        width: 100%;
+        text-align: center;
+        color: #666;
+        font-size: 0.8rem;
+        padding-bottom: 20px;
+      }
+      .footer a {
+        color: #999;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer a:hover {
+        color: #eaff6b;
+      }
+      .loading {
+        text-align: center;
+        padding: 60px 20px;
+        display: none;
+      }
+      .spinner {
+        border: 4px solid #333;
+        border-top: 4px solid #eaff6b;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .error-message {
+        background: rgba(241, 91, 181, 0.2);
+        color: #f15bb5;
+        border: 1px solid #f15bb5;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        margin: 20px 0;
+        display: none;
+      }
+      .pdf-container {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .pdf-container.loaded {
+        display: flex;
+      }
+      .pdf-page {
+        width: 100%;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      }
+      .pdf-page canvas {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .pdf-page img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .pdf-embed {
+        width: 100%;
+        min-height: 600px;
+        border: none;
+        border-radius: 12px;
+        background: #fff;
+      }
+      .download-btn {
+        width: 100%;
+        max-width: 400px;
+        background: linear-gradient(135deg, #7f5af0 0%, #f15bb5 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+      .download-btn:hover {
+        transform: translateY(-2px);
+      }
+      @media (max-width: 480px) {
+        .title {
+          font-size: 2rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .demo-title {
+          font-size: 1.5rem;
+        }
+        .container {
+          padding: 30px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <!-- SVG logo matching screenshot colors -->
+        <svg viewBox="0 0 100 100">
+          <path d="M50,10 C70,10 90,30 90,50" stroke="#7f5af0" stroke-width="7" fill="none"/>
+          <path d="M50,10 C30,10 10,30 10,50" stroke="#2cb67d" stroke-width="7" fill="none"/>
+          <path d="M50,90 C70,90 90,70 90,50" stroke="#f15bb5" stroke-width="7" fill="none"/>
+          <path d="M50,90 C30,90 10,70 10,50" stroke="#00cfff" stroke-width="7" fill="none"/>
+          <circle cx="50" cy="50" r="18" stroke="#eaff6b" stroke-width="7" fill="none"/>
+        </svg>
+      </div>
+      <div class="title">Comics Factory</div>
+      <div class="subtitle">
+        Generate 10+ page comics with consistent characters in one click.<br/>
+        Join the waitlist for early access!
+      </div>
+      <form class="email-form" id="subscribeForm">
+        <input 
+          type="email" 
+          id="email" 
+          class="input-field" 
+          placeholder="Enter your email" 
+          required 
+          autocomplete="email" 
+        />
+        <button type="submit" class="subscribe-btn" id="subscribeBtn">
+          Join the Waiting List
+        </button>
+      </form>
+      <div id="message" class="message"></div>
+      
+      <div class="demo-section">
+        <h3 class="demo-title">Sample Result</h3>
+        <p class="demo-subtitle">Check out this example storybook generated from the inputs below</p>
+        
+        <div class="form-group">
+          <label class="form-label">Photo</label>
+          <p class="input-explanation">Upload a photo of yourself. You will be the main character (protagonist) in the story!</p>
+          <div class="photo-upload">
+            <div class="photo-preview">
+              <img src="/public/hesdi.jpg" alt="Sample character photo" class="sample-photo">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="storyTitle">Title</label>
+          <p class="input-explanation">Give your comic book a catchy title.</p>
+          <input 
+            type="text" 
+            id="storyTitle"
+            id="storyTitle" 
+            class="demo-input" 
+            value="Shadow Slave"
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Genre</label>
+          <p class="input-explanation">Choose the art style and theme for your story.</p>
+          <div class="genre-selector">
+            <button type="button" class="genre-btn active">Manga</button>
+            <button type="button" class="genre-btn">Adventure</button>
+            <button type="button" class="genre-btn">Sci-Fi</button>
+            <button type="button" class="genre-btn">Mystery</button>
+          </div>
+          <input type="hidden" id="storyGenre" value="manga">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="storyPlot">Plot</label>
+          <p class="input-explanation">Describe what happens in your story. The AI will generate 10+ pages based on this.</p>
+          <textarea 
+            id="storyPlot" 
+            class="demo-input demo-textarea" 
+            rows="4"
+            readonly
+          >Growing up in poverty, Sunny never expected anything good from life. However, even he did not anticipate being chosen by the Nightmare Spell and becoming one of the Awakened - an elite group of people gifted with supernatural powers. Transported into a ruined magical world, he found himself facing against terrible monsters - and other Awakened - in a deadly battle of survival. What's worse, the divine power he received happened to possess a small, but potentially fatal side effect...</textarea>
+        </div>
+
+        <div class="result-divider" style="margin: 40px 0 20px 0; border-top: 1px dashed #333; position: relative; text-align: center;">
+            <span style="background: #111; padding: 0 15px; color: #eaff6b; position: relative; top: -12px; font-size: 1rem; font-weight: 600;">👇 GENERATED STORYBOOK 👇</span>
+        </div>
+
+        <div id="loading" class="loading">
+          <div class="spinner"></div>
+          <p style="color: #999;">Loading your storybook...</p>
+        </div>
+
+        <div id="error" class="error-message">
+          <h3>Oops! Something went wrong</h3>
+          <p id="error-text"></p>
+        </div>
+
+        <div id="pdf-container" class="pdf-container">
+          <!-- PDF pages will be rendered here as canvases -->
+        </div>
+
+        <a id="download-btn" class="download-btn" style="display: none;" download>
+          📥 Download PDF
+        </a>
+      <div class="features">
+        <h3>Why Comics Factory?</h3>
+        <ul>
+          <li><strong>10+ Page Comics:</strong> Generate full stories, not just single images.</li>
+          <li><strong>One-Click Magic:</strong> No complex prompting required.</li>
+          <li><strong>Consistent Characters:</strong> Your protagonist looks the same in every panel.</li>
+          <li><strong>Unique Technology:</strong> The only tool delivering multi-page consistency.</li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <p>Contact us: <a href="mailto:squad@comicsfactory.tech">squad@comicsfactory.tech</a></p>
+      </div>
+    </div>
+    
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      // Check if PDF.js loaded
+      if (typeof pdfjsLib === 'undefined') {
+        console.error('PDF.js failed to load');
+      } else {
+        // Configure PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+
+      const form = document.getElementById('subscribeForm');
+      const emailInput = document.getElementById('email');
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      const messageDiv = document.getElementById('message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const email = emailInput.value.trim();
+        
+        if (!email) {
+          showMessage('Please enter your email address', 'error');
+          return;
+        }
+
+        // Disable button and show loading state
+        subscribeBtn.disabled = true;
+        subscribeBtn.textContent = 'Subscribing...';
+        messageDiv.style.display = 'none';
+
+        try {
+          const response = await fetch('/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email })
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            showMessage('🎉 ' + data.message, 'success');
+            emailInput.value = '';
+            subscribeBtn.textContent = 'Subscribed!';
+            setTimeout(() => {
+              subscribeBtn.textContent = 'Join the Waiting List';
+            }, 3000);
+          } else {
+            showMessage(data.error || 'An error occurred. Please try again.', 'error');
+            subscribeBtn.textContent = 'Join the Waiting List';
+          }
+        } catch (error) {
+          showMessage('Network error. Please check your connection and try again.', 'error');
+          subscribeBtn.textContent = 'Join the Waiting List';
+        } finally {
+          subscribeBtn.disabled = false;
+        }
+      });
+
+      function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = 'message ' + type;
+        messageDiv.style.display = 'block';
+      }
+
+      // Automatically load PDF on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        loadPDF();
+      });
+
+      // Direct Firebase Storage URL
+      const pdfUrl = 'https://storage.googleapis.com/comics-factory-ae611.firebasestorage.app/comics/manga/hesdi.pdf';
+
+      // Function to render a single page
+      async function renderPage(pdf, pageNumber, container) {
+        try {
+          const page = await pdf.getPage(pageNumber);
+          
+          // Calculate scale to fit container width
+          const viewport = page.getViewport({ scale: 1 });
+          const containerWidth = container.offsetWidth || 450;
+          
+          // Use lower resolution for faster rendering as requested
+          // Max scale 1.0 ensures it's not too high res/slow
+          const maxScale = 1.0;
+          const scale = Math.min(maxScale, containerWidth / viewport.width);
+          const scaledViewport = page.getViewport({ scale: scale });
+
+          // Create canvas
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          canvas.height = scaledViewport.height;
+          canvas.width = scaledViewport.width;
+
+          // Create page wrapper
+          const pageDiv = document.createElement('div');
+          pageDiv.className = 'pdf-page';
+          pageDiv.appendChild(canvas);
+          container.appendChild(pageDiv);
+
+          // Render page
+          const renderContext = {
+            canvasContext: context,
+            viewport: scaledViewport
+          };
+          
+          await page.render(renderContext).promise;
+          console.log(`Rendered page ${pageNumber}`);
+        } catch (error) {
+          console.error(`Error rendering page ${pageNumber}:`, error);
+          throw error;
+        }
+      }
+
+      // Function to load and render all pages
+      async function loadPDF() {
+        try {
+          console.log('Starting PDF load...');
+          document.getElementById('loading').style.display = 'block';
+          document.getElementById('error').style.display = 'none';
+          
+          // Check if PDF.js is available
+          if (typeof pdfjsLib === 'undefined') {
+            console.warn('PDF.js not available, using fallback embed');
+            useFallbackEmbed();
+            return;
+          }
+
+          console.log('Loading PDF from:', pdfUrl);
+          
+          // Load PDF with CORS mode
+          const loadingTask = pdfjsLib.getDocument({
+            url: pdfUrl,
+            withCredentials: false
+          });
+          
+          const pdf = await loadingTask.promise;
+          console.log('PDF loaded, pages:', pdf.numPages);
+          
+          const container = document.getElementById('pdf-container');
+          container.innerHTML = ''; // Clear previous content
+          const numPages = pdf.numPages;
+
+          // Render all pages
+          for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+            await renderPage(pdf, pageNum, container);
+          }
+
+          console.log('All pages rendered');
+
+          // Show PDF container and hide loading
+          container.classList.add('loaded');
+          document.getElementById('loading').style.display = 'none';
+
+          // Setup download button
+          const downloadBtn = document.getElementById('download-btn');
+          downloadBtn.href = pdfUrl;
+          downloadBtn.style.display = 'inline-block';
+
+        } catch (error) {
+          console.error('Error loading PDF with PDF.js:', error);
+          console.log('Falling back to embed');
+          useFallbackEmbed();
+        }
+      }
+
+      // Fallback: Use Google Docs Viewer or direct embed
+      function useFallbackEmbed() {
+        const container = document.getElementById('pdf-container');
+        container.innerHTML = '';
+        
+        // Create iframe with Google Docs Viewer
+        const iframe = document.createElement('iframe');
+        iframe.className = 'pdf-embed';
+        iframe.src = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+        iframe.style.width = '100%';
+        iframe.style.height = '600px';
+        
+        container.appendChild(iframe);
+        container.classList.add('loaded');
+        document.getElementById('loading').style.display = 'none';
+
+        // Setup download button
+        const downloadBtn = document.getElementById('download-btn');
+        downloadBtn.href = pdfUrl;
+        downloadBtn.style.display = 'inline-block';
+      }
+
+      function showError(message) {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('error-text').textContent = message;
+      }
+    </script>
+  </body>
+</html>
