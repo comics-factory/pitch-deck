@@ -1,4 +1,4 @@
-name: AI StoryBook
+name: Comics Factory
 tagline: Illustrate your imaginations to others
 problem:
   - Teen manga fans and writers wait 1 week to 1 month per illustrated chapter.
@@ -29,11 +29,19 @@ team:
 ask: "$15k in API or GPU credits, publisher intros, legal regulations advice."
 demo:
   - title: "Demo 1: Shadow Slave (Manga Style)"
-    input_text: "A frail-looking young man with pale skin and dark circles..."
+    input_text: "Sunny looked around with curiosity, noting reinforced armor plates on the walls..."
     input_image: "assets/comics/manga.jpg"
-    output_image: "assets/comics/manga.jpg"
+    output_images:
+      - "assets/comics/manga_page_1.png"
+      - "assets/comics/manga_page_2.png"
+      - "assets/comics/manga_page_3.png"
+      - "assets/comics/manga_page_4.png"
     output_note: "(PDF version with full pages available)"
   - title: "Demo 2: The Boy and the Magic Van (Children's Book)"
     input_text: "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
     input_image: "assets/comics/children_book.JPG"
-    output_image: "assets/comics/children_book_page_1.png"
+    output_images:
+      - "assets/comics/children_book_page_1.png"
+      - "assets/comics/children_book_page_2.png"
+      - "assets/comics/children_book_page_3.png"
+      - "assets/comics/children_book_page_4.png"

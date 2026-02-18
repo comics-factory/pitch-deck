@@ -1,4 +1,4 @@
-# GEMINI.md — Docs-as-source Pitch Deck Generator (CLI + Git)
+# COPILOT.md — Docs-as-source Pitch Deck Generator (CLI + Git)
 
 > **Goal:** Generate professional, consistent pitch decks from **Markdown (docs-as-source)** stored in Git, exporting to **PPTX/PDF** via CLI.
 
@@ -89,9 +89,9 @@ uv run python scripts/build.py
   - build all target decks
   - publish artifacts to a release page
 
-## 10) Prompting guidelines for Gemini (how to behave in this repo)
+## 10) Prompting guidelines for COPILOT (how to behave in this repo)
 
-When working in this repository, Gemini should:
+When working in this repository, COPILOT should:
 
 1. **Prefer docs-as-source**: propose changes in Markdown/YAML rather than editing PPTX by hand.
 2. **Keep styling in themes/templates** (`themes/`) and avoid per-slide formatting hacks.

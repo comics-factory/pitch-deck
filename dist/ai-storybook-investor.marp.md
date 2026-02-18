@@ -2,15 +2,15 @@
 marp: true
 theme: comics-factory
 paginate: true
-header: AI StoryBook Pitch Deck
-footer: © 2026 AI StoryBook
+header: Comics Factory Pitch Deck
+footer: © 2026 Comics Factory
 ---
 
 <!-- _class: title -->
 
 ![logo w:150](../assets/logo.svg)
 
-# AI StoryBook
+# Comics Factory
 
 ## Illustrate your imaginations to others
 
@@ -47,18 +47,18 @@ footer: © 2026 AI StoryBook
 
 ### Demo 1: Shadow Slave (Manga Style)
 
-<div class="columns">
+<div class="columns" style="align-items: center;">
 <div class="column">
 
 **Input**
 
-<div class="demo-input">
+<div class="demo-input" style="font-size: 0.85em;">
 
-*Text:* "A frail-looking young man with pale skin and dark circles..."
+*Plot:* "Sunny looked around with curiosity, noting reinforced armor plates on the walls..."
 
 *Reference Image:*
 
-![w:300](../assets/comics/manga.jpg)
+![w:220](../assets/comics/manga.jpg)
 
 </div>
 </div>
@@ -67,10 +67,22 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550](../assets/comics/manga.jpg)
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; max-width: 320px; max-height: 280px;">
+
+<img src="../assets/comics/manga_page_1.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/manga_page_2.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/manga_page_3.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/manga_page_4.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+</div>
 
 
-<p style="font-size: 0.8em; color: #999;">(PDF version with full pages available)</p>
+
+<p style="font-size: 0.7em; color: #999; margin-top: 6px;">(PDF version with full pages available)</p>
 
 
 </div>
@@ -83,18 +95,18 @@ footer: © 2026 AI StoryBook
 
 ### Demo 2: The Boy and the Magic Van (Children's Book)
 
-<div class="columns">
+<div class="columns" style="align-items: center;">
 <div class="column">
 
 **Input**
 
-<div class="demo-input">
+<div class="demo-input" style="font-size: 0.85em;">
 
-*Text:* "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
+*Plot:* "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
 
 *Reference Image:*
 
-![w:300](../assets/comics/children_book.JPG)
+![w:220](../assets/comics/children_book.JPG)
 
 </div>
 </div>
@@ -103,7 +115,19 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550](../assets/comics/children_book_page_1.png)
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; max-width: 320px; max-height: 280px;">
+
+<img src="../assets/comics/children_book_page_1.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/children_book_page_2.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/children_book_page_3.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+<img src="../assets/comics/children_book_page_4.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+
+</div>
+
 
 
 

@@ -2,8 +2,8 @@
 marp: true
 theme: comics-factory
 paginate: true
-header: AI StoryBook Pitch Deck
-footer: © 2026 AI StoryBook
+header: Comics Factory Pitch Deck
+footer: © 2026 Comics Factory
 ---
 
 <!-- _class: title -->
@@ -37,18 +37,18 @@ footer: © 2026 AI StoryBook
 
 ### {{ demo.title }}
 
-<div class="columns">
+<div class="columns" style="align-items: center;">
 <div class="column">
 
 **Input**
 
-<div class="demo-input">
+<div class="demo-input" style="font-size: 0.85em;">
 
-*Text:* "{{ demo.input_text }}"
+*Plot:* "{{ demo.input_text }}"
 
 *Reference Image:*
 
-![w:300](../{{ demo.input_image }})
+![w:220](../{{ demo.input_image }})
 
 </div>
 </div>
@@ -57,10 +57,18 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550](../{{ demo.output_image }})
+{% if demo.output_images %}
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; max-width: 320px; max-height: 280px;">
+{% for img in demo.output_images %}
+<img src="../{{ img }}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;" />
+{% endfor %}
+</div>
+{% else %}
+![w:320](../{{ demo.output_image }})
+{% endif %}
 
 {% if demo.output_note %}
-<p style="font-size: 0.8em; color: #999;">{{ demo.output_note }}</p>
+<p style="font-size: 0.7em; color: #999; margin-top: 6px;">{{ demo.output_note }}</p>
 {% endif %}
 
 </div>
