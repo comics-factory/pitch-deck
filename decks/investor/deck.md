@@ -48,7 +48,7 @@ footer: © 2026 AI StoryBook
 
 *Reference Image:*
 
-![w:300]({{ demo.input_image }})
+![w:300](../{{ demo.input_image }})
 
 </div>
 </div>
@@ -57,7 +57,11 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550]({{ demo.output_image }})
+![w:550](../{{ demo.output_image }})
+
+{% if demo.output_note %}
+<p style="font-size: 0.8em; color: #999;">{{ demo.output_note }}</p>
+{% endif %}
 
 </div>
 </div>

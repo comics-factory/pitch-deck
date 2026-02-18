@@ -111,11 +111,14 @@ Comic demo assets:
 
 ## Troubleshooting
 
+### Images not displaying
+**Fixed!** Images now use correct relative paths (`../assets/`) from the `dist/` folder.
+- Verify files exist in `assets/` folder
+- HTML references use `../assets/` prefix
+- Image formats must be web-compatible (JPG, PNG, SVG, not PDF)
+
 ### "No suitable browser found"
 Install Chrome, Firefox, or Edge to enable PDF/PPTX export. HTML output always works without a browser.
-
-### Images not showing
-Use `--allow-local-files` flag with Marp CLI and ensure image paths are relative to the markdown file location.
 
 ### Theme not applied
 Verify `theme: comics-factory` is in the frontmatter and `themes/marp-theme.css` exists.

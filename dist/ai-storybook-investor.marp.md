@@ -58,7 +58,7 @@ footer: © 2026 AI StoryBook
 
 *Reference Image:*
 
-![w:300](assets/comics/manga.jpg)
+![w:300](../assets/comics/manga.jpg)
 
 </div>
 </div>
@@ -67,7 +67,11 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550](assets/comics/manga.pdf)
+![w:550](../assets/comics/manga.jpg)
+
+
+<p style="font-size: 0.8em; color: #999;">(PDF version with full pages available)</p>
+
 
 </div>
 </div>
@@ -90,7 +94,7 @@ footer: © 2026 AI StoryBook
 
 *Reference Image:*
 
-![w:300](assets/comics/children_book.JPG)
+![w:300](../assets/comics/children_book.JPG)
 
 </div>
 </div>
@@ -99,7 +103,9 @@ footer: © 2026 AI StoryBook
 
 **Generated Output**
 
-![w:550](assets/comics/children_book_page_1.png)
+![w:550](../assets/comics/children_book_page_1.png)
+
+
 
 </div>
 </div>
