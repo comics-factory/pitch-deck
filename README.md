@@ -1,4 +1,4 @@
-# AI StoryBook Pitch Deck Generator
+# Comics Factory Pitch Deck Generator
 
 A professional, docs-as-source pitch deck generator using Markdown, YAML, and Python.
 
@@ -15,7 +15,7 @@ uv pip install -r requirements.txt
 ### 2. Build the Deck
 To generate the latest pitch deck in `dist/`:
 ```bash
-uv run python scripts/build.py --deck investor --product ai-storybook
+uv run python scripts/build.py --deck investor --product comics-factory
 ```
 
 ## Project Structure
@@ -28,6 +28,6 @@ uv run python scripts/build.py --deck investor --product ai-storybook
 
 ## Customization
 
-- **Content:** Update `products/ai-storybook.yaml`.
+- **Content:** Update `products/comics-factory.yaml`.
 - **Narrative:** Modify `decks/investor/deck.md`.
 - **Styling:** Edit `themes/marp-theme.css`.

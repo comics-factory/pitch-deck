@@ -1,0 +1,113 @@
+name: Comics Factory
+tagline: Illustrate your imaginations to others
+subtitle: "Tired of waiting for new chapters? Continue on your own! One-click turns light novels into consistent, styled manga."
+mvp_status: "MVP live: 5-page chapters from 1k–1.5k words in ~5 minutes."
+problem:
+  - Teen manga fans and writers wait 1 week to 1 month per illustrated chapter.
+  - Manual creation is slow, costly, and requires professional skills.
+  - DIY AI tools lack fixed style and long-range character/story consistency.
+solution:
+  - One-click ranobe-to-manga: generate 5–20 pages per chapter in minutes.
+  - Built-in paneling, speech bubbles, right-to-left layout, EN translation.
+  - Sample pages: scan QR code for demo
+features:
+  - Style packs with consistent look; multi-chapter character continuity.
+  - Upload your images with text to align style or inject characters—make the hero look like you.
+  - Panel layout engine, speech bubbles, chapter structuring, export formats.
+innovation:
+  - Long-range character and plot consistency across chapters and runs.
+  - Fixed, reusable style packs and story-structure control.
+  - "Cost/time: ~5 minutes vs weeks; ~$4/20 pages now → ~$0.04/20 pages with local GPUs."
+market:
+  tam: "$16–20B (Global B2C creators/fans + B2B small publishers)"
+  sam: "$1.5–2.5B"
+  som: "$40–60M (3-yr reachable)"
+  initial_focus: "Light-novel-to-manga and teen creator communities"
+business_model:
+  - "Pay-per-chapter: $2.99 (5 pages), $9.99 (20 pages); 1 free 5-page on signup"
+  - "Future: marketplace for style packs; publisher revenue share/licensing"
+  - "IP policy: licensed/user data; inspired-by styles; no artist mimicry."
+tech:
+  - Fine-tuned Autoregressive Transformers/LoRA style packs, character embeddings, retrieval for continuity; layout & speech engine.
+  - Today via OpenAI/Google APIs; switchable to local GPUs when available.
+  - "Costs: ~$1 per 5 pages now (~$4/20p) → ~$0.04/20p; partner API in ~6 months."
+gtm:
+  - Self-serve web beta; community growth via Discord/Reddit/anime subs, WebNovel
+  - Outreach to Webtoon/Tapas creators; university anime/manga clubs
+  - YouTube/TikTok creator partnerships; publisher pilots in progress.
+competition:
+  comparison_table:
+    headers: ["", "Chapter", "Consistency", "Styles", "Bulk"]
+    competitors:
+      - name: "GenAI + manual (comicsmaker.ai, leonardo.ai, Midjourney, NovelAI)"
+        time: "30 min"
+        consistency: "Yes"
+        styles: "Yes"
+        bulk: "No"
+        note: "For artists and publishers, takes long to create chapter, but good quality."
+      - name: "Storybook engines (Gemini, storywizard.ai)"
+        time: "1 min"
+        consistency: "No"
+        styles: "No"
+        bulk: "Yes"
+        note: "No manga styling, text not embedded to image."
+      - name: "Full GenAI (loremachine.ai, OpenAI Image)"
+        time: "15 min"
+        consistency: "Yes"
+        styles: "Yes"
+        bulk: "No"
+        note: "One by one page generation, which makes creation longer. No solution for bulk generation."
+      - name: "AI StoryBook"
+        time: "5 min"
+        consistency: "Yes"
+        styles: "Yes"
+        bulk: "Yes"
+        note: "✅ Best combination"
+  differentiators:
+    - Long-term character/story consistency
+    - Fixed style packs
+    - 5–10 chapters/run
+    - Speed and cost
+roadmap:
+  short_term: "Public beta, 10+ styles, 20-page chapters, EN↔JP translation."
+  long_term: "Style marketplace, exports, publisher API pilots, early video/animatics."
+team:
+  - name: Abdulazizbek Gainazarov
+    role: Data Scientist
+    background: Work at WizzAir, Bachelor’s Degree in CS.
+  - name: Bálint Décsi
+    role: Data Engineer
+    background: Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML
+roadmap:
+  short_term: "0–6 mo: Public beta, 10+ styles, 20-page chapters, 10k-word runs, EN↔JP"
+  long_term: "6–24 mo: style marketplace, exports, publisher API pilots; visual-novel builder, early video/animatics"
+  outcomes:
+    y1: "~1,500 paying creators, ~5 publisher pilots, ARR ~$300k"
+    y2: "~6,000/15, ~$1.6M"
+    y3: "~20,000/40, ~$6M"
+traction:
+  - "MVP: Supports 1 manga style + basic children's storybooks"
+  - "20 chapters generated"
+  - "Waitlist 20; pilots in progress"
+  - "Demo: sample PDF linked"
+  - "Public web beta 1 month"
+  - "More styles and 10k-word runs this year"
+ask: "$15k in API or GPU credits, publisher intros, legal regulations advice"
+demo:
+  - title: "Demo 1: Shadow Slave (Manga Style)"
+    input_text: "Sunny looked around with curiosity, noting reinforced armor plates on the walls..."
+    input_image: "assets/comics/manga.jpg"
+    output_images:
+      - "assets/comics/manga_page_1.png"
+      - "assets/comics/manga_page_2.png"
+      - "assets/comics/manga_page_3.png"
+      - "assets/comics/manga_page_4.png"
+    output_note: "(PDF version with full pages available)"
+  - title: "Demo 2: The Boy and the Magic Van (Children's Book)"
+    input_text: "Misi found an old, blue van in a dusty, cobweb‑filled garage..."
+    input_image: "assets/comics/children_book.JPG"
+    output_images:
+      - "assets/comics/children_book_page_1.png"
+      - "assets/comics/children_book_page_2.png"
+      - "assets/comics/children_book_page_3.png"
+      - "assets/comics/children_book_page_4.png"

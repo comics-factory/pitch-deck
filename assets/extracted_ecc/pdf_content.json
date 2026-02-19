@@ -1,0 +1,247 @@
+[
+  {
+    "slide_number": 1,
+    "text": [
+      "AI StoryBook",
+      "Illustrate your imaginations to others"
+    ],
+    "full_text": "AI StoryBook\nIllustrate your imaginations to others"
+  },
+  {
+    "slide_number": 2,
+    "text": [
+      "AI StoryBook",
+      "• Tired of waiting for new chapters? Continue on your",
+      "own!",
+      "• One-click turns light novels into consistent, styled",
+      "manga.",
+      "• MVP live: 5-page chapters from 1k–1.5k words in ~5",
+      "minutes.",
+      "01"
+    ],
+    "full_text": "AI StoryBook\n• Tired of waiting for new chapters? Continue on your\nown!\n• One-click turns light novels into consistent, styled\nmanga.\n• MVP live: 5-page chapters from 1k–1.5k words in ~5\nminutes.\n01"
+  },
+  {
+    "slide_number": 3,
+    "text": [
+      "02",
+      "03",
+      "01",
+      "The Problem",
+      "4",
+      "Teen manga fans/writers wait 1 week–1 month per illustrated chapter",
+      "Manual creation is slow, costly, and requires pro skills",
+      "DIY AI tools lack fixed style and long-range character/story consistency."
+    ],
+    "full_text": "02\n03\n01\nThe Problem\n4\nTeen manga fans/writers wait 1 week–1 month per illustrated chapter\nManual creation is slow, costly, and requires pro skills\nDIY AI tools lack fixed style and long-range character/story consistency."
+  },
+  {
+    "slide_number": 4,
+    "text": [
+      "Our Solution + Demo",
+      "• One-click ranobe-to-manga:",
+      "generate 5–20 pages per",
+      "chapter in minutes.",
+      "• Built-in paneling, speech",
+      "bubbles, right-to-left layout,",
+      "EN translation.",
+      "• Sample pages: in QR",
+      "Your Footer Here",
+      "14"
+    ],
+    "full_text": "Our Solution + Demo\n• One-click ranobe-to-manga:\ngenerate 5–20 pages per\nchapter in minutes.\n• Built-in paneling, speech\nbubbles, right-to-left layout,\nEN translation.\n• Sample pages: in QR\nYour Footer Here\n14"
+  },
+  {
+    "slide_number": 5,
+    "text": [
+      "Product Features",
+      "• Style packs with consistent look; multi-chapter",
+      "character continuity.",
+      "• Upload your images with text to align style or inject",
+      "characters—make the hero look like you.",
+      "• Panel layout engine, speech bubbles, chapter",
+      "structuring, export formats.",
+      "04"
+    ],
+    "full_text": "Product Features\n• Style packs with consistent look; multi-chapter\ncharacter continuity.\n• Upload your images with text to align style or inject\ncharacters—make the hero look like you.\n• Panel layout engine, speech bubbles, chapter\nstructuring, export formats.\n04"
+  },
+  {
+    "slide_number": 6,
+    "text": [
+      "Innovation: Why We Win",
+      "• Long-range character and plot consistency across",
+      "chapters and runs.",
+      "• Fixed, reusable style packs and story-structure",
+      "control.",
+      "• Cost/time: ~5 minutes vs weeks;",
+      "~$4/20 pages now → ~$0.04/20 pages with local GPUs.",
+      "05"
+    ],
+    "full_text": "Innovation: Why We Win\n• Long-range character and plot consistency across\nchapters and runs.\n• Fixed, reusable style packs and story-structure\ncontrol.\n• Cost/time: ~5 minutes vs weeks;\n~$4/20 pages now → ~$0.04/20 pages with local GPUs.\n05"
+  },
+  {
+    "slide_number": 7,
+    "text": [
+      "Market Opportunity & Business Model & Pricing",
+      "Global B2C creators/fans",
+      "+ B2B small publishers",
+      "TAM ~$16–20B",
+      "SAM ~$1.5–2.5B",
+      "SOM (3-yr reachable)",
+      "~$40–60M.",
+      "Initial focus:",
+      "light-novel-to-manga and",
+      "teen creator communities",
+      "Pay-per-chapter:",
+      "$2.99 (5 pages),",
+      "$9.99 (20 pages); 1",
+      "free 5-page on",
+      "signup",
+      "Future: marketplace for",
+      "style packs; publisher",
+      "revenue share/licensing",
+      "IP policy: licensed/user",
+      "data; inspired-by styles; no",
+      "artist mimicry."
+    ],
+    "full_text": "Market Opportunity & Business Model & Pricing\nGlobal B2C creators/fans\n+ B2B small publishers\nTAM ~$16–20B\nSAM ~$1.5–2.5B\nSOM (3-yr reachable)\n~$40–60M.\nInitial focus:\nlight-novel-to-manga and\nteen creator communities\nPay-per-chapter:\n$2.99 (5 pages),\n$9.99 (20 pages); 1\nfree 5-page on\nsignup\nFuture: marketplace for\nstyle packs; publisher\nrevenue share/licensing\nIP policy: licensed/user\ndata; inspired-by styles; no\nartist mimicry."
+  },
+  {
+    "slide_number": 8,
+    "text": [
+      "Scalability",
+      "• Fine-tuned Autoregressive",
+      "Transformers/LoRA style packs,",
+      "character embeddings, retrieval",
+      "for continuity; layout & speech",
+      "engine.",
+      "• Today via OpenAI/Google APIs;",
+      "switchable to local GPUs when",
+      "available.",
+      "• Costs: ~$1 per 5 pages now",
+      "(~$4/20p) → ~$0.04/20p;",
+      "partner API in ~6 months.",
+      "Tech",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "full_text": "Scalability\n• Fine-tuned Autoregressive\nTransformers/LoRA style packs,\ncharacter embeddings, retrieval\nfor continuity; layout & speech\nengine.\n• Today via OpenAI/Google APIs;\nswitchable to local GPUs when\navailable.\n• Costs: ~$1 per 5 pages now\n(~$4/20p) → ~$0.04/20p;\npartner API in ~6 months.\nTech\n01\n02\n03\n04\n05\n06"
+  },
+  {
+    "slide_number": 9,
+    "text": [
+      "Go-To-Market",
+      "Self-serve web beta;",
+      "community growth via",
+      "Discord/Reddit/anime subs,",
+      "WebNovel",
+      "Outreach to Webtoon/Tapas creators;",
+      "university anime/manga clubs",
+      "YouTube/TikTok creator",
+      "partnerships; publisher",
+      "pilots in progress."
+    ],
+    "full_text": "Go-To-Market\nSelf-serve web beta;\ncommunity growth via\nDiscord/Reddit/anime subs,\nWebNovel\nOutreach to Webtoon/Tapas creators;\nuniversity anime/manga clubs\nYouTube/TikTok creator\npartnerships; publisher\npilots in progress."
+  },
+  {
+    "slide_number": 10,
+    "text": [
+      "Competition & Differentiation",
+      "Chapter",
+      "Consistency",
+      "Styles",
+      "Bulk",
+      "GenAI + manual",
+      "(comicsmaker.ai,",
+      "leonardo.ai,",
+      "Midjourney,",
+      "NovelAI)",
+      "30 min",
+      "Yes",
+      "Yes",
+      "No",
+      "Storybook engines",
+      "(Gemini,",
+      "storywizard.ai)",
+      "1 min",
+      "No",
+      "No",
+      "Yes",
+      "Full GenAI",
+      "(loremachine.ai,",
+      "OpenAI Image)",
+      "15 min",
+      "Yes",
+      "Yes",
+      "No",
+      "AI StoryBook",
+      "5 min",
+      "Yes",
+      "Yes",
+      "Yes",
+      "• Competitors:",
+      "GenAI + manual: for artists and publishers,",
+      "takes long to create chapter, but good quality.",
+      "Storybook engines: no manga styling, text not",
+      "embedded to image.",
+      "Full GenAI: One by one page generation, which",
+      "makes creation longer. No solution for bulk",
+      "generation",
+      "• Differentiators: long-term character/story",
+      "consistency; fixed style packs; 5–10",
+      "chapters/run; speed and cost.",
+      "20"
+    ],
+    "full_text": "Competition & Differentiation\nChapter\nConsistency\nStyles\nBulk\nGenAI + manual\n(comicsmaker.ai,\nleonardo.ai,\nMidjourney,\nNovelAI)\n30 min\nYes\nYes\nNo\nStorybook engines\n(Gemini,\nstorywizard.ai)\n1 min\nNo\nNo\nYes\nFull GenAI\n(loremachine.ai,\nOpenAI Image)\n15 min\nYes\nYes\nNo\nAI StoryBook\n5 min\nYes\nYes\nYes\n• Competitors:\nGenAI + manual: for artists and publishers,\ntakes long to create chapter, but good quality.\nStorybook engines: no manga styling, text not\nembedded to image.\nFull GenAI: One by one page generation, which\nmakes creation longer. No solution for bulk\ngeneration\n• Differentiators: long-term character/story\nconsistency; fixed style packs; 5–10\nchapters/run; speed and cost.\n20"
+  },
+  {
+    "slide_number": 11,
+    "text": [
+      "Traction & Team",
+      "• Abdulazizbek Gainazarov – Data Scientist:",
+      "⚬Work at WizzAir",
+      "⚬Education: Bachelor’s Degree, Computer Science",
+      "• Bálint Décsi – Data Engineer:",
+      "⚬Work: Deutsche Telekom IT Solutions HU",
+      "⚬Education: Master's degree, Data science for machine learning",
+      "• MVP:",
+      "⚬Supports 1 manga style + basic children’s storybooks;",
+      "⚬20 chapters generated;",
+      "⚬Waitlist 20; pilots in progress.",
+      "⚬Demo: sample PDF linked;",
+      "⚬Public web beta 1 month",
+      "⚬More styles and 10k-word runs this year"
+    ],
+    "full_text": "Traction & Team\n• Abdulazizbek Gainazarov – Data Scientist:\n⚬Work at WizzAir\n⚬Education: Bachelor’s Degree, Computer Science\n• Bálint Décsi – Data Engineer:\n⚬Work: Deutsche Telekom IT Solutions HU\n⚬Education: Master's degree, Data science for machine learning\n• MVP:\n⚬Supports 1 manga style + basic children’s storybooks;\n⚬20 chapters generated;\n⚬Waitlist 20; pilots in progress.\n⚬Demo: sample PDF linked;\n⚬Public web beta 1 month\n⚬More styles and 10k-word runs this year"
+  },
+  {
+    "slide_number": 12,
+    "text": [
+      "Roadmap, Results & Ask",
+      "• 0–6 mo: Public beta, 10+ styles, 20-page chapters,",
+      "10k-word runs, EN",
+      "JP;",
+      "• 6–24 mo: style marketplace, exports, publisher",
+      "API pilots; visual-novel builder, early video/animatics.",
+      "• Outcomes:",
+      "Y1 ~1,500 paying creators, ~5 publisher pilots, ARR ~$300k;",
+      "Y2 ~6,000/15, ~$1.6M;",
+      "Y3 ~20,000/40, ~$6M.",
+      "• What we need: $15k in API or GPU credits, publisher intros,",
+      "legal regulations advice;"
+    ],
+    "full_text": "Roadmap, Results & Ask\n• 0–6 mo: Public beta, 10+ styles, 20-page chapters,\n10k-word runs, EN\nJP;\n• 6–24 mo: style marketplace, exports, publisher\nAPI pilots; visual-novel builder, early video/animatics.\n• Outcomes:\nY1 ~1,500 paying creators, ~5 publisher pilots, ARR ~$300k;\nY2 ~6,000/15, ~$1.6M;\nY3 ~20,000/40, ~$6M.\n• What we need: $15k in API or GPU credits, publisher intros,\nlegal regulations advice;"
+  },
+  {
+    "slide_number": 13,
+    "text": [
+      "Thank You !",
+      "Hope you like this pitch :)"
+    ],
+    "full_text": "Thank You !\nHope you like this pitch :)"
+  }
+]

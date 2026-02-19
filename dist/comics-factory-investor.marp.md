@@ -14,6 +14,10 @@ footer: © 2026 Comics Factory
 
 ## Illustrate your imaginations to others
 
+Tired of waiting for new chapters? Continue on your own! One-click turns light novels into consistent, styled manga.
+
+<p style="font-size: 0.9em; margin-top: 20px;">MVP live: 5-page chapters from 1k–1.5k words in ~5 minutes.</p>
+
 ---
 
 ## The Problem
@@ -33,11 +37,38 @@ footer: © 2026 Comics Factory
 
 - {'One-click ranobe-to-manga': 'generate 5–20 pages per chapter in minutes.'}
 
+- Built-in paneling, speech bubbles, right-to-left layout, EN translation.
+
+- {'Sample pages': 'scan QR code for demo'}
+
+
+<div style="text-align: center; margin-top: 30px;">
+<img src="../assets/qr_demo.png" width="180" />
+<p style="font-size: 0.8em; color: #999; margin-top: 8px;">Scan for demo samples</p>
+</div>
+
+---
+
+## Product Features
+
+
+- Style packs with consistent look; multi-chapter character continuity.
+
+- Upload your images with text to align style or inject characters—make the hero look like you.
+
+- Panel layout engine, speech bubbles, chapter structuring, export formats.
+
+
+---
+
+## Innovation: Why We Win
+
+
 - Long-range character and plot consistency across chapters and runs.
 
 - Fixed, reusable style packs and story-structure control.
 
-- Built-in paneling, speech bubbles, and right-to-left layout.
+- Cost/time: ~5 minutes vs weeks; ~$4/20 pages now → ~$0.04/20 pages with local GPUs.
 
 
 ---
@@ -146,17 +177,76 @@ footer: © 2026 Comics Factory
 - **SAM:** $1.5–2.5B  
 - **SOM:** $40–60M (3-yr reachable)
 
+**Initial focus:** Light-novel-to-manga and teen creator communities
+
 </div>
 
 ---
 
-## Business Model
+## Business Model & Pricing
 
 
-- {'Pay-per-chapter': '$2.99 (5 pages), $9.99 (20 pages).'}
+- Pay-per-chapter: $2.99 (5 pages), $9.99 (20 pages); 1 free 5-page on signup
 
-- Marketplace for style packs and publisher revenue sharing/licensing.
+- Future: marketplace for style packs; publisher revenue share/licensing
 
+- IP policy: licensed/user data; inspired-by styles; no artist mimicry.
+
+
+---
+
+## Technology & Scalability
+
+
+- Fine-tuned Autoregressive Transformers/LoRA style packs, character embeddings, retrieval for continuity; layout & speech engine.
+
+- Today via OpenAI/Google APIs; switchable to local GPUs when available.
+
+- Costs: ~$1 per 5 pages now (~$4/20p) → ~$0.04/20p; partner API in ~6 months.
+
+
+---
+
+## Go-To-Market Strategy
+
+
+- Self-serve web beta; community growth via Discord/Reddit/anime subs, WebNovel
+
+- Outreach to Webtoon/Tapas creators; university anime/manga clubs
+
+- YouTube/TikTok creator partnerships; publisher pilots in progress.
+
+
+---
+
+## Competition & Differentiation
+
+<div style="font-size: 0.85em;">
+
+| Solution | Time | Consistency | Styles | Bulk |
+|----------|------|-------------|--------|------|
+
+| **GenAI + manual (comicsmaker.ai, leonardo.ai, Midjourney, NovelAI)** | 30 min | Yes | Yes | No |
+
+| **Storybook engines (Gemini, storywizard.ai)** | 1 min | No | No | Yes |
+
+| **Full GenAI (loremachine.ai, OpenAI Image)** | 15 min | Yes | Yes | No |
+
+| **AI StoryBook** | 5 min | Yes | Yes | Yes |
+
+
+**Key Differentiators:**
+
+- Long-term character/story consistency
+
+- Fixed style packs
+
+- 5–10 chapters/run
+
+- Speed and cost
+
+
+</div>
 
 ---
 
@@ -165,18 +255,41 @@ footer: © 2026 Comics Factory
 <div class="columns">
 <div class="column">
 
-### 🎯 Short Term
-Public beta, 10+ styles, 20-page chapters, EN↔JP translation.
+### 🎯 Short Term (0–6 mo)
+0–6 mo: Public beta, 10+ styles, 20-page chapters, 10k-word runs, EN↔JP
 
 </div>
 
 <div class="column">
 
-### 🚀 Long Term
-Style marketplace, exports, publisher API pilots, early video/animatics.
+### 🚀 Long Term (6–24 mo)
+6–24 mo: style marketplace, exports, publisher API pilots; visual-novel builder, early video/animatics
 
 </div>
 </div>
+
+**Projected Outcomes:**
+- Year 1: ~1,500 paying creators, ~5 publisher pilots, ARR ~$300k
+- Year 2: ~6,000/15, ~$1.6M
+- Year 3: ~20,000/40, ~$6M
+
+---
+
+## Traction
+
+
+- MVP: Supports 1 manga style + basic children's storybooks
+
+- 20 chapters generated
+
+- Waitlist 20; pilots in progress
+
+- Demo: sample PDF linked
+
+- Public web beta 1 month
+
+- More styles and 10k-word runs this year
+
 
 ---
 
@@ -193,7 +306,7 @@ Work at WizzAir, Bachelor’s Degree in CS.
 <div class="emphasis">
 
 **Bálint Décsi** - *Data Engineer*
-Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML.
+Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML
 
 </div>
 
@@ -204,7 +317,7 @@ Work at Deutsche Telekom IT Solutions HU, Master's degree in Data Science for ML
 
 <div class="highlight">
 
-$15k in API or GPU credits, publisher intros, legal regulations advice.
+$15k in API or GPU credits, publisher intros, legal regulations advice
 
 </div>
 

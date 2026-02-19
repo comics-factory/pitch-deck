@@ -17,19 +17,19 @@ Build the deck with the enhanced Marp theme:
 
 ```bash
 # Using uv (recommended)
-uv run python scripts/build.py --deck investor --product ai-storybook --engine marp
+uv run python scripts/build.py --deck investor --product comics-factory --engine marp
 ```
 
 ## Output Files
 
 The build generates:
-- `dist/ai-storybook-investor.html` - Interactive HTML presentation with full styling
-- `dist/ai-storybook-investor.marp.md` - Rendered Markdown with product data
+- `dist/comics-factory-investor.html` - Interactive HTML presentation with full styling
+- `dist/comics-factory-investor.marp.md` - Rendered Markdown with product data
 
 ## Viewing the Deck
 
 ### HTML (Best Option)
-Open `dist/ai-storybook-investor.html` in any web browser for the fully styled presentation.
+Open `dist/comics-factory-investor.html` in any web browser for the fully styled presentation.
 
 ### Generate PDF/PPTX (Requires Browser)
 To export PDF or PPTX, you need a browser installed (Chrome, Firefox, or Edge):
@@ -39,7 +39,7 @@ To export PDF or PPTX, you need a browser installed (Chrome, Firefox, or Edge):
 sudo apt install chromium-browser
 
 # Then build with Marp
-uv run python scripts/build.py --deck investor --product ai-storybook --engine marp
+uv run python scripts/build.py --deck investor --product comics-factory --engine marp
 ```
 
 Marp will automatically generate:
@@ -84,7 +84,7 @@ Edit `decks/investor/deck.md` to change:
 - Emphasis blocks
 
 ### Change Product Data
-Edit `products/ai-storybook.yaml` to update:
+Edit `products/comics-factory.yaml` to update:
 - Problem statements
 - Solutions
 - Market data
@@ -125,7 +125,7 @@ Verify `theme: comics-factory` is in the frontmatter and `themes/marp-theme.css`
 
 ## Next Steps
 
-1. **View the HTML** - Open `dist/ai-storybook-investor.html` to see the enhanced styling
+1. **View the HTML** - Open `dist/comics-factory-investor.html` to see the enhanced styling
 2. **Install a browser** - For PDF/PPTX export if needed
 3. **Customize** - Adjust colors, layouts, and content to your needs
 4. **Present** - Use HTML in browser presentation mode or export to your preferred format

@@ -14,6 +14,10 @@ footer: © 2026 Comics Factory
 
 ## {{ product.tagline }}
 
+{{ product.subtitle }}
+
+<p style="font-size: 0.9em; margin-top: 20px;">{{ product.mvp_status }}</p>
+
 ---
 
 ## The Problem
@@ -27,6 +31,27 @@ footer: © 2026 Comics Factory
 ## Our Solution
 
 {% for item in product.solution %}
+- {{ item }}
+{% endfor %}
+
+<div style="text-align: center; margin-top: 30px;">
+<img src="../assets/qr_demo.png" width="180" />
+<p style="font-size: 0.8em; color: #999; margin-top: 8px;">Scan for demo samples</p>
+</div>
+
+---
+
+## Product Features
+
+{% for item in product.features %}
+- {{ item }}
+{% endfor %}
+
+---
+
+## Innovation: Why We Win
+
+{% for item in product.innovation %}
 - {{ item }}
 {% endfor %}
 
@@ -86,15 +111,52 @@ footer: © 2026 Comics Factory
 - **SAM:** {{ product.market.sam }}  
 - **SOM:** {{ product.market.som }}
 
+**Initial focus:** {{ product.market.initial_focus }}
+
 </div>
 
 ---
 
-## Business Model
+## Business Model & Pricing
 
 {% for item in product.business_model %}
 - {{ item }}
 {% endfor %}
+
+---
+
+## Technology & Scalability
+
+{% for item in product.tech %}
+- {{ item }}
+{% endfor %}
+
+---
+
+## Go-To-Market Strategy
+
+{% for item in product.gtm %}
+- {{ item }}
+{% endfor %}
+
+---
+
+## Competition & Differentiation
+
+<div style="font-size: 0.85em;">
+
+| Solution | Time | Consistency | Styles | Bulk |
+|----------|------|-------------|--------|------|
+{% for comp in product.competition.comparison_table.competitors %}
+| **{{ comp.name }}** | {{ comp.time }} | {{ comp.consistency }} | {{ comp.styles }} | {{ comp.bulk }} |
+{% endfor %}
+
+**Key Differentiators:**
+{% for diff in product.competition.differentiators %}
+- {{ diff }}
+{% endfor %}
+
+</div>
 
 ---
 
@@ -103,18 +165,31 @@ footer: © 2026 Comics Factory
 <div class="columns">
 <div class="column">
 
-### 🎯 Short Term
+### 🎯 Short Term (0–6 mo)
 {{ product.roadmap.short_term }}
 
 </div>
 
 <div class="column">
 
-### 🚀 Long Term
+### 🚀 Long Term (6–24 mo)
 {{ product.roadmap.long_term }}
 
 </div>
 </div>
+
+**Projected Outcomes:**
+- Year 1: {{ product.roadmap.outcomes.y1 }}
+- Year 2: {{ product.roadmap.outcomes.y2 }}
+- Year 3: {{ product.roadmap.outcomes.y3 }}
+
+---
+
+## Traction
+
+{% for item in product.traction %}
+- {{ item }}
+{% endfor %}
 
 ---
 
