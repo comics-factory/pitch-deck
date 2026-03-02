@@ -32,15 +32,17 @@
       --glow-green: rgba(44, 182, 125, 0.12);
     }
 
-    html, body { height: 100%; overflow: hidden; background: var(--bg-deep); }
-
+    html { height: 100%; overflow: hidden; }
     body {
+      height: 100%; overflow: hidden; margin: 0;
+      width: 100%; max-width: 100vw;
+      background: var(--bg-deep);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--text-primary);
       -webkit-font-smoothing: antialiased;
     }
 
-    .deck { position: relative; width: 100%; height: 100%; }
+    .deck { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
     .slide {
       position: absolute; inset: 0;
@@ -123,13 +125,7 @@
       align-items: center; text-align: center;
       justify-content: center;
     }
-    .slide.title-slide::before {
-      background:
-        radial-gradient(ellipse 800px 600px at 50% 40%, var(--glow-yellow), transparent),
-        radial-gradient(ellipse 600px 400px at 30% 70%, var(--glow-purple), transparent),
-        radial-gradient(ellipse 500px 350px at 70% 60%, var(--glow-pink), transparent);
-      opacity: .5;
-    }
+    
     .title-logo { width: 100px; height: 100px; margin-bottom: 20px; }
     .title-slide h1 {
       text-shadow: 0 0 60px rgba(234,255,107,.25), 0 0 120px rgba(127,90,240,.15);
@@ -237,11 +233,13 @@
     }
 
     /* === Comparison table === */
+    .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .comp-table {
-      width: 100%; border-collapse: separate; border-spacing: 0;
+      width: 100%; min-width: 460px; border-collapse: separate; border-spacing: 0;
       font-size: 14px; margin-top: 12px;
       border-radius: 12px; overflow: hidden;
       border: 1px solid var(--border-subtle);
+      word-break: normal;
     }
     .comp-table thead th {
       background: var(--bg-card); padding: 12px 16px;
@@ -410,15 +408,70 @@
 
     /* === Responsive === */
     @media (max-width: 900px) {
-      .slide { padding: 40px 36px; }
+      .slide {
+        padding: 40px 36px;
+        overflow-x: hidden; overflow-y: auto;
+        justify-content: flex-start;
+        word-break: break-word;
+      }
+      .slide.title-slide, .slide.thank-slide {
+        justify-content: flex-start;
+        padding-top: 60px;
+      }
+      .slide img { max-width: 100%; height: auto; }
       .cards-3, .cards-4 { grid-template-columns: 1fr 1fr; }
       .split { flex-direction: column; gap: 24px; }
-      .demo-grid { grid-template-columns: 1fr; }
+      .split-left, .split-right { flex: unset; width: 100%; }
+      .demo-columns { flex-direction: column; gap: 20px; }
+      .demo-col { width: 100%; }
       .team-grid { grid-template-columns: 1fr; }
       .timeline { flex-direction: column; gap: 16px; }
       .timeline::before { display: none; }
       .timeline-item { padding-top: 0; padding-left: 36px; text-align: left; }
       .timeline-dot { top: 4px; left: 0; }
+      .table-scroll { max-width: 100%; }
+      .slide-footer {
+        position: static;
+        margin-top: auto;
+        padding-top: 16px;
+      }
+    }
+    @media (max-width: 480px) {
+      .slide {
+        padding: 28px 20px;
+        overflow-x: hidden; overflow-y: auto;
+        justify-content: flex-start;
+      }
+      .slide.title-slide, .slide.thank-slide { align-items: center; padding-top: 40px; }
+      .title-logo { width: 70px; height: 70px; margin-bottom: 14px; }
+      .cards-3, .cards-4, .cards-2 { grid-template-columns: 1fr; }
+      h2 { font-size: 26px; margin-bottom: 14px; }
+      .card { padding: 16px; }
+      .card-icon { width: 36px; height: 36px; font-size: 18px; margin-bottom: 10px; }
+      .card h4 { font-size: 14px; }
+      .card p { font-size: 13px; }
+      .num-card { padding: 14px 16px; gap: 12px; }
+      .num-badge { width: 30px; height: 30px; font-size: 14px; }
+      .num-card h4 { font-size: 14px; }
+      .num-card p { font-size: 12.5px; }
+      .demo-output-grid { max-width: 100%; }
+      .demo-input-box img { width: 140px; }
+      .metric { padding: 12px 14px; min-width: 80px; }
+      .metric-value { font-size: 20px; }
+      .metric-label { font-size: 10px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+      .chip-row { gap: 6px; }
+      .highlight-box { padding: 18px 16px; }
+      .highlight-box p { font-size: 15px; }
+      .team-card { padding: 16px; gap: 12px; flex-direction: column; }
+      .team-avatar { width: 42px; height: 42px; font-size: 18px; }
+      .qr-wrap img { width: 140px !important; height: 140px !important; }
+      .title-slide h1 { font-size: 44px !important; }
+      .title-mvp { font-size: 13px; padding: 8px 16px; }
+      .slide-counter { font-size: 11px; bottom: 10px; right: 16px; }
+      .slide-footer { font-size: 10px; bottom: 10px; left: 20px; }
+      .pricing-row { flex-direction: column; }
+      .metrics { gap: 10px; }
     }
 
     /* Nav hint */
@@ -686,6 +739,7 @@
   <!-- ============================================================ -->
   <div class="slide" data-slide="10">
     <h2>Competition &amp; Differentiation</h2>
+    <div class="table-scroll">
     <table class="comp-table">
       <thead>
         <tr>
@@ -727,6 +781,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
     <div class="chip-row" style="margin-top: 16px;">
       <div class="chip accent">Long-term consistency</div>
       <div class="chip accent">Fixed style packs</div>
@@ -877,6 +932,8 @@
 
   slides[0].classList.add('active');
   update();
+
+
 
   const hint = document.getElementById('navHint');
   hint.classList.add('show');
